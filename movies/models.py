@@ -56,7 +56,7 @@ class Movie(models.Model):
     world_premiere = models.DateField("Премьера в мире", default=date.today)
     budget = models.PositiveIntegerField("Бюджет", default=0, help_text="указывать сумму в долларах")
     fees_in_usa = models.PositiveIntegerField(
-        "Сборы в мире", default=0, help_text="указывать сумму в долларах"
+        "Сборы в США", default=0, help_text="указывать сумму в долларах"
     )
     fees_in_world = models.PositiveIntegerField(
         "Сборы в мире", default=0, help_text="указывать сумму в долларах"
