@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 {% load static %}
+{% for movie in movie_list %}
+    {{ movie.title }}
+{% endfor %}
 <html lang="ru">
 <head>
     <!-- //Meta tag Keywords -->
@@ -279,7 +282,7 @@
                                 </div>
                                 <div class="item-info-product">
                                     <h4 class="">
-                                        <a href="moviesingle.html" class="editContent"> {{ movie.title }} </a>
+                                        <a href="{% url 'movie_detail' movie.url %}" class="editContent"> {{ movie.title }} </a>
                                     </h4>
 
                                     <div class="product_price">
